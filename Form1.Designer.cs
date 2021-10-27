@@ -44,15 +44,9 @@
             this.beta = new System.Windows.Forms.TextBox();
             this.labelGamma = new System.Windows.Forms.Label();
             this.gamma = new System.Windows.Forms.TextBox();
-            this.labelDelta = new System.Windows.Forms.Label();
-            this.delta = new System.Windows.Forms.TextBox();
-            this.labelEpsilon = new System.Windows.Forms.Label();
-            this.epsilon = new System.Windows.Forms.TextBox();
             this.checkAlpha = new System.Windows.Forms.RadioButton();
             this.checkBeta = new System.Windows.Forms.RadioButton();
             this.checkGamma = new System.Windows.Forms.RadioButton();
-            this.checkDelta = new System.Windows.Forms.RadioButton();
-            this.checkEpsilon = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.labelM = new System.Windows.Forms.Label();
             this.m = new System.Windows.Forms.TextBox();
@@ -66,17 +60,25 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonN
             // 
-            this.buttonN.Location = new System.Drawing.Point(1093, 423);
+            this.buttonN.Location = new System.Drawing.Point(569, 458);
             this.buttonN.Margin = new System.Windows.Forms.Padding(4);
             this.buttonN.Name = "buttonN";
-            this.buttonN.Size = new System.Drawing.Size(100, 28);
+            this.buttonN.Size = new System.Drawing.Size(138, 28);
             this.buttonN.TabIndex = 0;
-            this.buttonN.Text = "Draw N";
+            this.buttonN.Text = "Нарисовать N";
             this.buttonN.UseVisualStyleBackColor = true;
             this.buttonN.Click += new System.EventHandler(this.ButtonN_Click);
             // 
@@ -84,28 +86,28 @@
             // 
             this.pointChart.BackColor = System.Drawing.SystemColors.Window;
             this.pointChart.IsShowPointValues = false;
-            this.pointChart.Location = new System.Drawing.Point(47, 81);
+            this.pointChart.Location = new System.Drawing.Point(13, 82);
             this.pointChart.Margin = new System.Windows.Forms.Padding(4);
             this.pointChart.Name = "pointChart";
             this.pointChart.PointValueFormat = "G";
-            this.pointChart.Size = new System.Drawing.Size(549, 481);
+            this.pointChart.Size = new System.Drawing.Size(525, 462);
             this.pointChart.TabIndex = 1;
             // 
             // buttonP
             // 
-            this.buttonP.Location = new System.Drawing.Point(1093, 466);
+            this.buttonP.Location = new System.Drawing.Point(726, 458);
             this.buttonP.Margin = new System.Windows.Forms.Padding(4);
             this.buttonP.Name = "buttonP";
-            this.buttonP.Size = new System.Drawing.Size(100, 28);
+            this.buttonP.Size = new System.Drawing.Size(138, 28);
             this.buttonP.TabIndex = 2;
-            this.buttonP.Text = "Draw P";
+            this.buttonP.Text = "Нарисовать P";
             this.buttonP.UseVisualStyleBackColor = true;
             this.buttonP.Click += new System.EventHandler(this.ButtonP_Click);
             // 
             // labelA
             // 
             this.labelA.AutoSize = true;
-            this.labelA.Location = new System.Drawing.Point(797, 120);
+            this.labelA.Location = new System.Drawing.Point(745, 140);
             this.labelA.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(17, 17);
@@ -115,7 +117,7 @@
             // labelB
             // 
             this.labelB.AutoSize = true;
-            this.labelB.Location = new System.Drawing.Point(908, 120);
+            this.labelB.Location = new System.Drawing.Point(882, 140);
             this.labelB.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelB.Name = "labelB";
             this.labelB.Size = new System.Drawing.Size(17, 17);
@@ -124,7 +126,7 @@
             // 
             // B
             // 
-            this.B.Location = new System.Drawing.Point(933, 117);
+            this.B.Location = new System.Drawing.Point(907, 137);
             this.B.Margin = new System.Windows.Forms.Padding(4);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(56, 22);
@@ -133,7 +135,7 @@
             // 
             // C
             // 
-            this.C.Location = new System.Drawing.Point(822, 192);
+            this.C.Location = new System.Drawing.Point(770, 212);
             this.C.Margin = new System.Windows.Forms.Padding(4);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(56, 22);
@@ -143,7 +145,7 @@
             // labelC
             // 
             this.labelC.AutoSize = true;
-            this.labelC.Location = new System.Drawing.Point(797, 195);
+            this.labelC.Location = new System.Drawing.Point(745, 215);
             this.labelC.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelC.Name = "labelC";
             this.labelC.Size = new System.Drawing.Size(17, 17);
@@ -152,7 +154,7 @@
             // 
             // D
             // 
-            this.D.Location = new System.Drawing.Point(933, 192);
+            this.D.Location = new System.Drawing.Point(907, 212);
             this.D.Margin = new System.Windows.Forms.Padding(4);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(56, 22);
@@ -162,7 +164,7 @@
             // labelD
             // 
             this.labelD.AutoSize = true;
-            this.labelD.Location = new System.Drawing.Point(908, 195);
+            this.labelD.Location = new System.Drawing.Point(882, 215);
             this.labelD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelD.Name = "labelD";
             this.labelD.Size = new System.Drawing.Size(18, 17);
@@ -172,7 +174,7 @@
             // labelAlpha
             // 
             this.labelAlpha.AutoSize = true;
-            this.labelAlpha.Location = new System.Drawing.Point(1068, 71);
+            this.labelAlpha.Location = new System.Drawing.Point(832, 292);
             this.labelAlpha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAlpha.Name = "labelAlpha";
             this.labelAlpha.Size = new System.Drawing.Size(16, 17);
@@ -181,7 +183,7 @@
             // 
             // alpha
             // 
-            this.alpha.Location = new System.Drawing.Point(1095, 67);
+            this.alpha.Location = new System.Drawing.Point(859, 288);
             this.alpha.Margin = new System.Windows.Forms.Padding(4);
             this.alpha.Name = "alpha";
             this.alpha.Size = new System.Drawing.Size(57, 22);
@@ -191,7 +193,7 @@
             // labelBeta
             // 
             this.labelBeta.AutoSize = true;
-            this.labelBeta.Location = new System.Drawing.Point(1068, 103);
+            this.labelBeta.Location = new System.Drawing.Point(832, 324);
             this.labelBeta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelBeta.Name = "labelBeta";
             this.labelBeta.Size = new System.Drawing.Size(16, 17);
@@ -200,7 +202,7 @@
             // 
             // beta
             // 
-            this.beta.Location = new System.Drawing.Point(1095, 99);
+            this.beta.Location = new System.Drawing.Point(859, 320);
             this.beta.Margin = new System.Windows.Forms.Padding(4);
             this.beta.Name = "beta";
             this.beta.Size = new System.Drawing.Size(57, 22);
@@ -210,7 +212,7 @@
             // labelGamma
             // 
             this.labelGamma.AutoSize = true;
-            this.labelGamma.Location = new System.Drawing.Point(1069, 135);
+            this.labelGamma.Location = new System.Drawing.Point(833, 356);
             this.labelGamma.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelGamma.Name = "labelGamma";
             this.labelGamma.Size = new System.Drawing.Size(15, 17);
@@ -219,50 +221,12 @@
             // 
             // gamma
             // 
-            this.gamma.Location = new System.Drawing.Point(1093, 131);
+            this.gamma.Location = new System.Drawing.Point(857, 352);
             this.gamma.Margin = new System.Windows.Forms.Padding(4);
             this.gamma.Name = "gamma";
             this.gamma.Size = new System.Drawing.Size(57, 22);
             this.gamma.TabIndex = 18;
             this.gamma.Text = "1";
-            // 
-            // labelDelta
-            // 
-            this.labelDelta.AutoSize = true;
-            this.labelDelta.Location = new System.Drawing.Point(1069, 167);
-            this.labelDelta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelDelta.Name = "labelDelta";
-            this.labelDelta.Size = new System.Drawing.Size(16, 17);
-            this.labelDelta.TabIndex = 20;
-            this.labelDelta.Text = "∂";
-            // 
-            // delta
-            // 
-            this.delta.Location = new System.Drawing.Point(1095, 163);
-            this.delta.Margin = new System.Windows.Forms.Padding(4);
-            this.delta.Name = "delta";
-            this.delta.Size = new System.Drawing.Size(57, 22);
-            this.delta.TabIndex = 21;
-            this.delta.Text = "1";
-            // 
-            // labelEpsilon
-            // 
-            this.labelEpsilon.AutoSize = true;
-            this.labelEpsilon.Location = new System.Drawing.Point(1069, 199);
-            this.labelEpsilon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.labelEpsilon.Name = "labelEpsilon";
-            this.labelEpsilon.Size = new System.Drawing.Size(15, 17);
-            this.labelEpsilon.TabIndex = 23;
-            this.labelEpsilon.Text = "ε";
-            // 
-            // epsilon
-            // 
-            this.epsilon.Location = new System.Drawing.Point(1095, 195);
-            this.epsilon.Margin = new System.Windows.Forms.Padding(4);
-            this.epsilon.Name = "epsilon";
-            this.epsilon.Size = new System.Drawing.Size(57, 22);
-            this.epsilon.TabIndex = 24;
-            this.epsilon.Text = "1";
             // 
             // checkAlpha
             // 
@@ -296,45 +260,23 @@
             this.checkGamma.TabIndex = 27;
             this.checkGamma.UseVisualStyleBackColor = true;
             // 
-            // checkDelta
-            // 
-            this.checkDelta.AutoSize = true;
-            this.checkDelta.Location = new System.Drawing.Point(8, 119);
-            this.checkDelta.Margin = new System.Windows.Forms.Padding(4);
-            this.checkDelta.Name = "checkDelta";
-            this.checkDelta.Size = new System.Drawing.Size(17, 16);
-            this.checkDelta.TabIndex = 27;
-            this.checkDelta.UseVisualStyleBackColor = true;
-            // 
-            // checkEpsilon
-            // 
-            this.checkEpsilon.AutoSize = true;
-            this.checkEpsilon.Location = new System.Drawing.Point(8, 151);
-            this.checkEpsilon.Margin = new System.Windows.Forms.Padding(4);
-            this.checkEpsilon.Name = "checkEpsilon";
-            this.checkEpsilon.Size = new System.Drawing.Size(17, 16);
-            this.checkEpsilon.TabIndex = 27;
-            this.checkEpsilon.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkEpsilon);
             this.groupBox1.Controls.Add(this.checkAlpha);
             this.groupBox1.Controls.Add(this.checkBeta);
-            this.groupBox1.Controls.Add(this.checkDelta);
             this.groupBox1.Controls.Add(this.checkGamma);
-            this.groupBox1.Location = new System.Drawing.Point(1167, 48);
+            this.groupBox1.Location = new System.Drawing.Point(931, 269);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(32, 185);
+            this.groupBox1.Size = new System.Drawing.Size(32, 113);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             // 
             // labelM
             // 
             this.labelM.AutoSize = true;
-            this.labelM.Location = new System.Drawing.Point(1068, 269);
+            this.labelM.Location = new System.Drawing.Point(743, 282);
             this.labelM.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelM.Name = "labelM";
             this.labelM.Size = new System.Drawing.Size(19, 17);
@@ -343,7 +285,7 @@
             // 
             // m
             // 
-            this.m.Location = new System.Drawing.Point(1095, 266);
+            this.m.Location = new System.Drawing.Point(770, 279);
             this.m.Margin = new System.Windows.Forms.Padding(4);
             this.m.Name = "m";
             this.m.Size = new System.Drawing.Size(59, 22);
@@ -352,7 +294,7 @@
             // 
             // n
             // 
-            this.n.Location = new System.Drawing.Point(1095, 298);
+            this.n.Location = new System.Drawing.Point(770, 311);
             this.n.Margin = new System.Windows.Forms.Padding(4);
             this.n.Name = "n";
             this.n.Size = new System.Drawing.Size(59, 22);
@@ -362,7 +304,7 @@
             // labelN
             // 
             this.labelN.AutoSize = true;
-            this.labelN.Location = new System.Drawing.Point(1068, 301);
+            this.labelN.Location = new System.Drawing.Point(743, 314);
             this.labelN.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelN.Name = "labelN";
             this.labelN.Size = new System.Drawing.Size(16, 17);
@@ -371,7 +313,7 @@
             // 
             // p
             // 
-            this.p.Location = new System.Drawing.Point(1095, 330);
+            this.p.Location = new System.Drawing.Point(770, 343);
             this.p.Margin = new System.Windows.Forms.Padding(4);
             this.p.Name = "p";
             this.p.Size = new System.Drawing.Size(59, 22);
@@ -381,7 +323,7 @@
             // labelP
             // 
             this.labelP.AutoSize = true;
-            this.labelP.Location = new System.Drawing.Point(1069, 333);
+            this.labelP.Location = new System.Drawing.Point(744, 346);
             this.labelP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelP.Name = "labelP";
             this.labelP.Size = new System.Drawing.Size(16, 17);
@@ -390,7 +332,7 @@
             // 
             // x0
             // 
-            this.x0.Location = new System.Drawing.Point(1095, 379);
+            this.x0.Location = new System.Drawing.Point(770, 392);
             this.x0.Margin = new System.Windows.Forms.Padding(4);
             this.x0.Name = "x0";
             this.x0.Size = new System.Drawing.Size(59, 22);
@@ -400,7 +342,7 @@
             // labelX0
             // 
             this.labelX0.AutoSize = true;
-            this.labelX0.Location = new System.Drawing.Point(1068, 382);
+            this.labelX0.Location = new System.Drawing.Point(743, 395);
             this.labelX0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelX0.Name = "labelX0";
             this.labelX0.Size = new System.Drawing.Size(22, 17);
@@ -409,7 +351,7 @@
             // 
             // A
             // 
-            this.A.Location = new System.Drawing.Point(822, 117);
+            this.A.Location = new System.Drawing.Point(770, 137);
             this.A.Margin = new System.Windows.Forms.Padding(4);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(56, 22);
@@ -418,19 +360,19 @@
             // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(1093, 517);
+            this.buttonClear.Location = new System.Drawing.Point(887, 458);
             this.buttonClear.Margin = new System.Windows.Forms.Padding(4);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(100, 28);
+            this.buttonClear.Size = new System.Drawing.Size(133, 28);
             this.buttonClear.TabIndex = 36;
-            this.buttonClear.Text = "Clear chart";
+            this.buttonClear.Text = "Очистить";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(664, 120);
+            this.label1.Location = new System.Drawing.Point(612, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 17);
             this.label1.TabIndex = 37;
@@ -439,18 +381,70 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(664, 195);
+            this.label2.Location = new System.Drawing.Point(612, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 17);
             this.label2.TabIndex = 38;
             this.label2.Text = "По вертикали:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Лабораторная_3_метод_итераций.Properties.Resources.FUNC;
+            this.pictureBox1.InitialImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(486, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 39;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Red;
+            this.pictureBox2.Location = new System.Drawing.Point(612, 279);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(70, 31);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox3.Location = new System.Drawing.Point(612, 329);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 31);
+            this.pictureBox3.TabIndex = 41;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(688, 276);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(18, 17);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "N";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(688, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 17);
+            this.label4.TabIndex = 43;
+            this.label4.Text = "P";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1266, 613);
+            this.ClientSize = new System.Drawing.Size(1080, 578);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonClear);
@@ -466,13 +460,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.D);
             this.Controls.Add(this.labelD);
-            this.Controls.Add(this.epsilon);
             this.Controls.Add(this.C);
-            this.Controls.Add(this.labelEpsilon);
             this.Controls.Add(this.labelC);
-            this.Controls.Add(this.delta);
             this.Controls.Add(this.B);
-            this.Controls.Add(this.labelDelta);
             this.Controls.Add(this.labelB);
             this.Controls.Add(this.gamma);
             this.Controls.Add(this.labelGamma);
@@ -489,6 +479,9 @@
             this.Text = "Метод итераций. Гаранин Андрей ИВТ-41";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,15 +505,9 @@
         private System.Windows.Forms.TextBox beta;
         private System.Windows.Forms.Label labelGamma;
         private System.Windows.Forms.TextBox gamma;
-        private System.Windows.Forms.Label labelDelta;
-        private System.Windows.Forms.TextBox delta;
-        private System.Windows.Forms.Label labelEpsilon;
-        private System.Windows.Forms.TextBox epsilon;
         private System.Windows.Forms.RadioButton checkAlpha;
         private System.Windows.Forms.RadioButton checkBeta;
         private System.Windows.Forms.RadioButton checkGamma;
-        private System.Windows.Forms.RadioButton checkDelta;
-        private System.Windows.Forms.RadioButton checkEpsilon;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label labelM;
         private System.Windows.Forms.TextBox m;
@@ -534,6 +521,11 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
