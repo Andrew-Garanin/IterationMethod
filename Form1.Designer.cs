@@ -65,6 +65,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,6 +86,7 @@
             // pointChart
             // 
             this.pointChart.BackColor = System.Drawing.SystemColors.Window;
+            this.pointChart.ForeColor = System.Drawing.SystemColors.ControlText;
             this.pointChart.IsShowPointValues = false;
             this.pointChart.Location = new System.Drawing.Point(13, 82);
             this.pointChart.Margin = new System.Windows.Forms.Padding(4);
@@ -434,12 +436,23 @@
             this.label4.TabIndex = 43;
             this.label4.Text = "P";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(672, 493);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(284, 51);
+            this.label5.TabIndex = 44;
+            this.label5.Text = "Для того, чтобы изобразить в окне все n \r\nрезультатов итераций нужно сделать \r\nпа" +
+    "раметр p равным 1.";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1080, 578);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox3);
@@ -526,6 +539,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 

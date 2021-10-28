@@ -29,7 +29,7 @@ namespace IterationMethod
 
         public bool ValidateParamsAndSizes(double param)
         {
-            if (param< -100 || param>100)
+            if (param < -100 || param > 100)
                 return false;
             return true;
         }
@@ -62,8 +62,8 @@ namespace IterationMethod
                 p_A = Convert.ToDouble(A.Text);
                 if (!ValidateParamsAndSizes(p_A))
                 {
-                     MessageBox.Show("Параметр A должен принадлежать диапозону [-100;100].");
-                     return false;
+                    MessageBox.Show("Параметр A должен принадлежать диапозону [-100;100].");
+                    return false;
                 }
                 p_B = Convert.ToDouble(B.Text);
                 if (!ValidateParamsAndSizes(p_B))
@@ -101,7 +101,7 @@ namespace IterationMethod
                     MessageBox.Show("Параметр γ должен принадлежать диапозону [-100;100].");
                     return false;
                 }
-                
+
                 param_m = Convert.ToInt32(m.Text);
                 if (!ValidateNumberIterationsParams(param_m))
                 {
@@ -128,18 +128,19 @@ namespace IterationMethod
                     return false;
                 }
                 return true;
-            }catch(FormatException e)
+            }
+            catch (FormatException e)
             {
                 MessageBox.Show(e.Message);
                 return false;
             }
         }
 
-        public double Function(double x1, double alpha1, double beta1, double gamma1)
+        public double Function(double x, double alpha, double beta, double gamma)
         {
-            if (x1 - gamma1 != 0)
+            if (x - gamma != 0)
             {
-                return alpha1 * Math.Sin(Math.Tan(beta1 * x1)) * Math.Sin(gamma1 * x1);
+                return alpha * Math.Sin(Math.Tan(beta * x)) * Math.Sin(gamma * x);
             }
             else
             {
@@ -172,39 +173,48 @@ namespace IterationMethod
             }
 
             foreach (double p_i in paramsValues)
-            { 
+            {
                 List<Double> x_j = new List<Double>();
-                x_j.Add(p_x0);
-                for (int j = 1; j < param_m; j++) 
+                double newValue = p_x0;
+                for (int j = 1; j < param_m; j++)
                 {
-                    
-                        if (checkAlpha.Checked)
-                        {
-                            double value = Function(x_j[j - 1], p_i, p_beta, p_gamma);
-                            x_j.Add(value);
-                            if (j < param_n)
-                            {
-                                points.Add(p_i, value);
-                            }
-                        }
-                        if (checkBeta.Checked)
-                        {
-                            double value = Function(x_j[j - 1], p_alpha, p_i, p_gamma);
-                            x_j.Add(value);
-                            if (j < param_n)
-                            {
-                                points.Add(p_i, value);
-                            }
-                        }
-                        if (checkGamma.Checked)
-                        {
-                            double value = Function(x_j[j - 1], p_alpha, p_beta, p_i);
-                            x_j.Add(value);
-                            if (j < param_n)
-                            {
-                                points.Add(p_i, value);
-                            }
-                        }
+                    if (checkAlpha.Checked)
+                    {
+                        newValue = Function(newValue, p_i, p_beta, p_gamma);
+                    }
+                    if (checkBeta.Checked)
+                    {
+                        newValue = Function(newValue, p_alpha, p_i, p_gamma);
+                    }
+                    if (checkGamma.Checked)
+                    {
+                        newValue = Function(newValue, p_alpha, p_beta, p_i);
+                    }
+                }
+
+                x_j.Add(newValue);
+                for (int curN = 0; curN < param_n; curN++)
+                {
+                    if (checkAlpha.Checked && curN % param_p ==0)
+                    {
+                        double value = Function(x_j[x_j.Count - 1], p_i, p_beta, p_gamma);
+                        x_j.Add(value);
+                        points.Add(p_i, value);
+                    }
+                    if (checkBeta.Checked && curN % param_p == 0)
+                    {
+                        double value = Function(x_j[x_j.Count - 1], p_alpha, p_i, p_gamma);
+                        x_j.Add(value);
+                        points.Add(p_i, value);
+
+                    }
+                    if (checkGamma.Checked && curN % param_p == 0)
+                    {
+                        double value = Function(x_j[x_j.Count - 1], p_alpha, p_beta, p_i);
+                        x_j.Add(value);
+                        points.Add(p_i, value);
+
+                    }
                 }
             }
 
@@ -286,7 +296,7 @@ namespace IterationMethod
             curve.Symbol.Fill.Color = Color.Blue;
             curve.Symbol.Fill.Type = FillType.Solid;
             curve.Symbol.Size = 1;
-            
+
             pane.XAxis.Min = p_A;
             pane.XAxis.Max = p_B;
             pane.YAxis.Min = p_C;
